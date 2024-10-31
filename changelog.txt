@@ -1,0 +1,141 @@
+*** NoFraud Protection for WooCommerce Changelog ***
+
+2024-10-10 - version 4.4.4
+* Bugfix - Fix for get_nf_data() incorrectly returning empty data instead of requested data
+
+2024-10-01 - version 4.4.3
+* Feature - Added support for Cardknox Payment Gateway for WooCommerce plugin, including Saved Cards feature
+* Bugfix - Add extra logic for Under Review step to prevent multiple transaction reviews
+* Bugfix - Only submit one IP for evaluation if multiple are present
+
+2024-08-29 - version 4.4.2
+* Feature - Added post-broadcast transaction evaluation for BlueSnap
+
+2024-08-07 - version 4.4.1
+* Updated supported version details
+
+2024-08-06 - version 4.4.0
+* Bugfix - Added order created restrictions for NoFraud evaluation processing
+
+2024-07-14 - version 4.3.2
+* Feature - Add support for NMI Payment Gateway For WooCommerce (Enterprise)
+
+2024-06-27 - version 4.3.1
+* Feature - Added apply_filters('woocommerce_nofraud_do_not_transition_statuses') for determination of which statuses to restrict from being transitioned
+* Feature - Add support for BlueSnap Payment Gateway
+
+2024-02-29 - version 4.3.0
+* Feature - Added support for accept.blue payment gateway
+
+2024-02-07 - version 4.2.2
+* Feature - Added support for automatically voiding/refunding NoFraud Failed orders when using SkyVerge Authorize.net gateway
+* Bugfix - Fix Authorize.net Apple Pay conflict
+* Bugfix - Fix issue where HPOS sync feature was incorrectly detected
+* Bugfix - Fix conflict with third party 3PL plugins that change the order status
+
+2023-12-29 - version 4.2.1
+* Feature - Added support for NMI Authorize only capture method
+* Updated QA/Test endpoints
+* Bugfix - Added extra verification against re-validating pre-HPOS orders, re-processing already processed orders
+
+2023-10-04 - version 4.2.0
+* Feature - Added support for WooCommerce HPOS
+* Feature - Added support for Stripe Authorize only capture method
+
+2023-06-29 - version 4.1.2
+* Fix - Stripe support improvements
+
+2023-06-05 - version 4.1.1
+* Fix - Changed line item cost reporting from item total to item per unit
+* Plugin tested up to Wordpress 6.2.2
+
+2023-02-04 - version 4.1.0
+* Feature - Added support for Payment Plugins Braintree For WooCommerce Credit Card transactions
+* Fix - Increased sensitivity of NoFraud evaluate transaction checks for Authorization orders
+
+2023-01-10 - version 4.0.9
+* Feature - Added support for AngelEye PayPal for WooCommerce (PayFlow)
+* Feature - Added support for SkyVerge WooCommerce Authorize.Net plugin Authorization Transaction Type mode
+* Feature - Added additional data capture details for Authorize.Net CIM for WooCommerce by Cardpay
+* Feature - Added settings to control Order Status when "review" or "pass" decisions are reached
+* Feature - Added settings to control evaluation depending on Capture/Authorization status
+* Feature - Added settings to control whether Order Status is modified by this plugin
+
+2022-09-07 - version 4.0.8
+* Feature - Added support for Pledged Authorize.net plugin
+
+2022-08-29 - version 4.0.7
+* Feature - Added support for WorldPay/Vantiv Gateway
+
+2022-06-26 - version 4.0.6
+* Feature - Added support for Intuit Payments Gateway
+
+2022-05-21 - version 4.0.5
+* Fix - Address issue where too many Order Notes were generated for Under Review status
+* Updated QA/Test endpoints
+
+2022-05-04 - version 4.0.4
+* Feature - Added support for NMI Payment Gateway
+
+2022-04-17 - version 4.0.3
+* Feature - Added support for WooCommerce Sequential Order Numbers Pro plugin
+
+2022-03-21 - version 4.0.2
+* Feature - Added Debug Mode for diagnosis purposes
+* Fix - Updated some code to remove PHP notices
+
+2022-03-13 - version 4.0.1
+* Readme - Updated WC and WP tested up to latest versions (5.9.2, 6.3.1)
+
+2021-12-13 - version 4.0.0
+* Feature - Added support for wp.insider WooCommerce PayPal Pro Payment Gateway (customized version of plugin only)
+
+2021-11-11 - version 3.1.0
+* Feature - Added support for AngellEYE PayPal for WooCommerce plugin (DoDirectPayment method only)
+
+2022-01-27 - version 3.0.1
+* Tested Support for Wordpress 5.9, WooCommerce 6.1.1
+
+2021-11-08 - version 3.0.0
+* Feature - Added support for Cardpay Solutions Authorize.Net CIM for WooCommerce plugin
+* Feature - Added support for SkyVerge WooCommerce Authorize.Net plugin
+* Feature - Added ability to enable/disable specific Payment Gateways for screening
+* Feature - Added rescreen order when Edit Order is used to update shipping address
+* Feature - Added DISABLED NoFraud decision when Payment Gateway used is disabled for screening
+* Feature - Added ALLOWED/BLOCKED NoFraud decision when allowlist/blocklist overrides transaction screening
+* Fix - Fixed Cancelling / refunding of order in WooCommerce will cancel the order in the portal.
+
+2021-09-29 - version 2.2.5
+* Update - Update the plugin description.
+
+2021-09-27 - version 2.2.4
+* Update - Update the plugin description.
+
+2021-09-24 - version 2.2.3
+* Update - Update the plugin name to NoFraud Protection for WooCommerce.
+
+2021-09-24 - version 2.2.2
+* Fix - Handle get_sku() on bool error.
+
+2021-09-24 - version 2.2.1
+* Dev - Send out a custom hook when a new decision is received.
+
+2021-09-23 - version 2.2.0
+* Feature - Enable auto adding of device JavaScript code.
+* Feature - Cancelling / refunding of order in WooCommerce will cancel the order in the portal.
+* Update - Rename product slug from "woocommerce-nofraud" to "nofraud-protection".
+
+2021-08-23 - version 2.1.2
+* Feature - Added new dropdown select to allow merchant to select a different Order Status to transition to on NoFraud Decision "fail" and "Fraudulent".
+
+2021-07-13 - version 2.1.1
+* Dev - Updated code to be compliant to WooCommerce platform's lint requirements.
+* Update - Updated Stripe library to latest.
+* Dev - Tested WooCommerce platform to version 5.5.0.
+
+2021-06-29 - version 2.1.0
+* Feature - Load Device JavaScript on Card and Checkout pages for better fraud detection.
+* Enhancement - On plugin settings page, validate NoFraud API Key.
+
+2021-06-20 - version 2.0.0
+* Feature - First official 2.0.0 release of NoFraud Protection for WooCommerce plugin.
